@@ -1,0 +1,574 @@
+  
+  :root {
+    --Negro:     rgb(22, 22, 20);
+    --Blanco:    #f5efed;
+    --Blanco2:   #d3d3d3;
+    --Gris:      #292626;
+    --Azul:      #0c3fce;
+    --Azul2:     #3ec5fa;
+    --AzulOscuro:rgb(21, 48, 83);
+    --AzulClaro: #14a5be;
+    --AzulGris:  #435bc7;
+    --Naranja:   #d15f13;
+    --Naranja2:  #c7bc21;
+}
+
+html {
+    scroll-padding-top: 68px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: -webkit-linear-gradient( var(--Azul2), var(--AzulGris));
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--Negro);
+    margin: 0;
+}
+
+main{
+    margin-top: 68px;
+}
+
+ul { 
+    list-style: none;
+}
+
+header { 
+    box-shadow: 0 5px 15px var(--Gris);
+    justify-content: space-between;
+    background: var(--Blanco2);
+    user-select: none;
+    position: fixed; 
+    padding: 0.6em; 
+    display: flex;
+    height: 3em;
+    width: 100%;
+    top: 0;   
+    z-index: 2;
+}
+ 
+header img { 
+    padding-left:10px ;
+    height: 38pt;
+    width: 38pt;
+    margin: 0;  
+    transition: all 0.3s ease-in-out;
+}
+
+header:has(h1:hover) img {
+    filter: drop-shadow(0px 0px 4px var(--Azul));
+}
+
+nav ul { 
+    display: inline-flex;
+    margin-right: 25px;
+    color: var(--Azul);
+    font-weight: bold;
+    font-size: 18px; 
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+    background: -webkit-linear-gradient(var(--Azul), var(--Azul2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover {
+    text-shadow: 1px 1px 4px var(--Azul); 
+    background: -webkit-linear-gradient(var(--Gris), var(--Azul2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}  
+
+nav ul li::after {
+    content: "";
+    position: absolute;
+    background: -webkit-linear-gradient(var(--Azul), var(--Blanco));
+    border-radius: 8px;
+    bottom: -5px;
+    height: 15%;
+    width: 0%;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+h1 { 
+    display: inline-flex;
+    margin-left: -510px ;
+    margin-top: 13px;
+    font-size: 20pt; 
+    height: 35px;  
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover{
+    text-shadow: 0 0 15px var(--Azul);
+}   
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    cursor: pointer;
+    font-size: 30pt;
+    margin: 0;
+}
+
+section {
+    border: 1px solid var(--Negro);
+    border-bottom: 4px solid var(--Negro);
+}
+
+#Inicio {
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    padding: 45px 100px;
+}
+
+#Inicio div {
+    display: inline-flex;
+    padding: 6px;
+}
+
+#Inicio h2 {
+    display: inline-flex;
+    position: relative;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(var(--Naranja), var(--Naranja2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    -webkit-text-stroke-width: 2px ;
+    -webkit-text-stroke-color: var(--Gris);
+}
+
+#Inicio h2:hover {
+    text-shadow: 1px 1px 20px var(--Naranja); 
+    background: -webkit-linear-gradient(#ff6600, #ffee00);
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}  
+
+#Inicio h2::after {
+    content: "";
+    position: absolute;
+    background: -webkit-linear-gradient(#af602b, #e2d51a);
+    border: 0px solid var(--Gris);
+    border-radius: 8px;
+    bottom: -10px;
+    height: 8%;
+    width: 0%;
+    left: 0;
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Inicio h2:hover::after {
+    border: 1px solid var(--Gris);
+    width: 100%;
+}
+
+#Inicio p {
+    text-align: center;
+    font-size: 18pt;
+    padding: 10px;
+    width: 500px;
+    height: 40%;
+    margin: 20px 50px -0px 20px;
+    text-shadow: 4px 2px 6px var(--Gris);
+
+    background: rgba(255, 255, 255, 0.06); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Inicio p:hover {
+    transform: rotate(-2deg);
+}
+
+#Inicio img {
+    margin: 0;
+    width: 620px;
+    height: 23em;
+    filter: drop-shadow(0px 0px 14px #000);
+    transition: all 0.3s 0.1s ease-in-out;
+}
+
+#Inicio img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(10px 10px 20px #000);
+}
+
+#Reglas {
+    background: -webkit-linear-gradient(var(--Naranja), var(--Naranja2));
+    padding: 40px 0px;
+}
+
+#Reglas h2 {
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: -10px;
+    margin-bottom: 40px;
+    padding: 5px;
+    width: 49%;
+
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: var(--Negro);
+    transition:  all 0.2s 0.1s ease-in-out;
+}
+
+#Reglas h2:hover {
+    text-shadow: 0 0 20px var(--Azul2);
+}
+
+#Reglas h2::after {
+    content: "";
+    position: absolute;
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    border: 0px solid var(--Gris);
+    border-radius: 8px;
+    bottom: -5px;
+    height: 8%;
+    width: 0%;
+    left: 0;
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Reglas h2:hover::after {
+    border: 1px solid var(--Gris);
+    width: 100%;
+}
+
+#Reglas ul {
+    justify-content: center; 
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px 15px;
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+#Reglas li {
+    border: 1px solid var(--Blanco);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+
+    flex: 0 1 calc(21% - 50px); 
+    min-width: 200px;            
+    height: 160px;
+
+    background: rgba(255, 255, 255, 0.06); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.384);
+    transition: all 0.2s ease-in-out;
+}
+
+#Reglas li:hover {
+    transform: rotate(-3deg);
+}
+
+#Reglas h3 {
+    justify-content: center;
+    width: 185px;
+    display: flex;
+    position: relative;
+    margin: 10px auto;
+    font-size: 17pt;
+
+    background: -webkit-linear-gradient(var(--Azul), var(--AzulClaro));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: var(--Negro);
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Reglas h3:hover {
+    text-shadow: 0 0 20px var(--Azul2);
+}
+
+#Reglas p {
+    text-align:center;
+    padding: 0px 10px;
+    font-size: 13pt;
+    margin: 0;
+    text-shadow: 4px 2px 6px var(--Naranja);
+}
+
+#Simbolo {
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Naranja2));
+    padding: 45px 20px;
+}
+
+#Simbolo h2 {
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 680px;
+
+    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: var(--Negro);
+    transition:  all 0.2s 0.1s ease-in-out;
+}
+
+#Simbolo h2:hover {
+    text-shadow: 0 0 20px var(--Naranja2);
+}
+
+#Simbolo h2::after {
+    content: "";
+    position: absolute;
+    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
+    border: 0px solid var(--Gris);
+    border-radius: 8px;
+    bottom: -3px;
+    height: 8%;
+    width: 0%;
+    left: 0;
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Simbolo h2:hover::after {
+    border: 1px solid var(--Gris);
+    width: 100%;
+}
+
+#Simbolo div {
+    justify-content: center; 
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 30px 25px;
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+#Simbolo article {
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+
+    flex: 0 1 calc(23% - 5px); 
+
+    background: rgba(255, 255, 255, 0.06); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.384);
+    transition: all 0.2s ease-in-out;
+}
+
+#Simbolo article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.589);
+}
+
+#Simbolo img {
+    width: 130px;
+    height: 90px;
+    filter: hue-rotate(310deg);
+    filter: drop-shadow(0 0 10px rgba(207, 207, 207, 0.589) );
+}
+
+#Simbolo .conector img {
+    width: 160px;
+    height: 90px;
+}
+
+#Simbolo h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17pt;
+
+    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: var(--Negro);
+    transition:  all 0.2s 0.1s ease-in-out;
+}
+
+#Simbolo article:hover h3 {
+    text-shadow: 0 0 20px var(--Naranja2);
+}
+
+#Simbolo p {
+    text-align:center;
+    padding: 0px 10px;
+    font-size: 13pt;
+    margin: 0;
+    margin-top: 20px;
+    text-shadow: 4px 2px 6px var(--AzulClaro);
+}
+
+#Ejemplos  {
+    background: -webkit-linear-gradient( var(--Azul2), var(--AzulGris));
+    padding: 45px 20px;
+}
+
+#Ejemplos h2 {
+    position: relative;
+    text-align: center;
+    margin: 0px auto;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    width: 680px;
+
+    background: -webkit-linear-gradient(var(--AzulGris) , var(--Azul2));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-stroke-width: 1px ;
+    -webkit-text-stroke-color: var(--Negro);
+    transition:  all 0.2s 0.1s ease-in-out;
+}
+
+#Ejemplos h2:hover {
+    text-shadow: 0 0 20px var(--Azul2);
+}
+
+#Ejemplos h2::after {
+    content: "";
+    position: absolute;
+    background: -webkit-linear-gradient(var(--Azul2), var(--AzulGris));
+    border: 0px solid var(--Gris);
+    border-radius: 8px;
+    bottom: -3px;
+    height: 8%;
+    width: 0%;
+    left: 0;
+    transition: all 0.3s 0.2s ease-in-out;
+}
+
+#Ejemplos h2:hover::after {
+    border: 1px solid var(--Gris);
+    width: 100%;
+}
+
+#Ejemplos ul {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#Ejemplos li {
+    display: inline-flex;
+    margin: 0px 16px;
+    width: 396px;
+    
+    background: linear-gradient(145deg, #2e2b2ba6, #25222293);
+    border: 1px solid rgba(236, 226, 226, 0.589);
+    border-radius: 20px;
+    
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.384), -5px -5px 20px rgba(62, 197, 250, 0.1); 
+
+    transition: all 0.2s ease-in-out;
+}
+
+#Ejemplos #Ejemplo1 img {
+    margin: 10px auto;
+    height: 385px;
+    width: 270px;
+    filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
+}
+
+#Ejemplos #Ejemplo2 img {
+    margin: 10px auto;
+    height: 385px;
+    width: 380px;
+    filter: drop-shadow(0 0 10px rgba(49, 51, 51, 0.589) );
+}
+
+#Ejemplos #Ejemplo3 img {
+    margin: 10px auto;
+    padding: 7px;
+    height: 370px;
+    width: 376px;
+    filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
+}
+
+#Ejemplos li:hover {
+    transform: scale(1.05);
+}
+
+footer { 
+    box-shadow: 0 5px 15px var(--Gris);
+    justify-content: space-between;
+    display: inline-flex;
+    background: var(--Blanco2);
+    border-radius: 40px 40px 0px 0px;
+    border: 2px solid var(--Negro);
+    border-top: 2px solid var(--Negro);
+    margin: 0;  
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer img { 
+    padding-left:10px ;
+    height: 38pt;
+    width: 38pt;
+    margin: 0;  
+    padding: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+footer #Pf { 
+    font-weight: bold;
+    font-size: 20pt; 
+    height: 64px;
+    margin: 0;
+    margin-top: 9px;
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    transition: all 0.3s ease-in-out;
+}
+
+footer #Pf:hover{
+    text-shadow: 0 0 15px var(--Azul);
+} 
+
+footer:has(#Pf:hover) img {
+    filter: drop-shadow(0px 0px 4px var(--Azul));
+}
+
+footer div{
+    height: 70px;
+    margin: 0;
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    text-shadow: 0 0 15px var(--Azul);
+} 
