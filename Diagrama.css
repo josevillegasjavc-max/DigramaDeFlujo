@@ -572,3 +572,100 @@ footer div{
     background-clip: text; 
     text-shadow: 0 0 15px var(--Azul);
 } 
+
+/* --- ADAPTACIÓN PARA MÓVILES (Pantallas menores a 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Header y Navegación */
+    header {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative; /* Evita que tape el contenido al ser más alto */
+    }
+
+    h1 {
+        margin-left: 0; /* Quitamos el margen negativo que lo sacaba de pantalla */
+        margin-top: 10px;
+        font-size: 16pt;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-right: 0;
+        padding: 10px 0;
+    }
+
+    main {
+        margin-top: 0;
+    }
+
+    /* 2. Sección Inicio */
+    #Inicio {
+        padding: 20px;
+    }
+
+    #Inicio h2 {
+        font-size: 22pt;
+        display: block;
+        text-align: center;
+    }
+
+    #Inicio div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Inicio p {
+        width: 100%; /* El texto ahora ocupa todo el ancho disponible */
+        margin: 20px 0;
+        font-size: 14pt;
+    }
+
+    #Inicio img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 3. Sección Reglas y Símbolos */
+    #Reglas h2, #Simbolo h2, #Ejemplos h2 {
+        width: 90%; /* Ya no son fijos a 680px */
+        font-size: 20pt;
+    }
+
+    #Reglas li, #Simbolo article {
+        flex: 0 1 100%; /* Una sola columna en móvil */
+        max-width: 100%;
+    }
+
+    /* 4. Sección Ejemplos */
+    #Ejemplos ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #Ejemplos li {
+        width: 90%; /* Las tarjetas se adaptan al ancho del móvil */
+        margin: 0;
+        justify-content: center;
+    }
+
+    #Ejemplos #Ejemplo1 img, 
+    #Ejemplos #Ejemplo2 img, 
+    #Ejemplos #Ejemplo3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 5. Footer */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        text-align: center;
+    }
+}
