@@ -524,15 +524,15 @@ section {
 footer { 
     box-shadow: 0 5px 15px var(--Gris);
     justify-content: space-between;
-    display: flex;
     background: var(--Blanco2);
-    border-radius: 40px 40px 0px 0px;
     border: 2px solid var(--Negro);
     border-top: 2px solid var(--Negro);
-    margin: 0;  
+    border-radius: 40px 40px 0px 0px;
+    display: flex;
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
+    margin: 0;  
 }
 
 footer img { 
