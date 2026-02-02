@@ -133,6 +133,7 @@ section {
 #Inicio {
     background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
     padding: 45px 100px;
+    width: 100%;
 }
 
 #Inicio div {
