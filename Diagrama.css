@@ -13,6 +13,10 @@
     --Naranja2:  #c7bc21;
 }
 
+* {
+   max-width: 100%;;
+}
+
 html {
     scroll-padding-top: 68px;
     scroll-behavior: smooth;
@@ -133,7 +137,6 @@ section {
 #Inicio {
     background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
     padding: 45px 100px;
-    width: 100%;
 }
 
 #Inicio div {
