@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diagramas de flujo</title>
     <link rel="stylesheet" href="Diagrama.css">
+    <link rel="icon" type="image/png" href="Img/Diagrama.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <a href="#Inicio"><img class="Logo" src="Img/Logo.png"></a>
-        <h1><a href="#Inicio">Diagramas De <Span>Flujo</Span></a></h1>
+        <div class="Clogo">
+            <a href="#Inicio"><img class="Logoimg" src="Img/Logo.png"></a>
+            <h1 class="Logo"><a href="#Inicio">Diagrama De Flujo</a></h1>
+        </div>
         <nav>
-            <ul>
+            <ul class="nav">
                 <li><a href="#Inicio">Inicio</a></li>
                 <li><a href="#Reglas">Reglas</a></li>
                 <li><a href="#Simbolo">Simbolos</a></li>
@@ -35,7 +39,7 @@
             </div>
         </section>
         <section id="Reglas">
-            <h2>Reglas un Diagrama de Flujo</h2>
+            <h2>Reglas de un Diagrama de Flujo</h2>
             <ul>
                 <li>
                     <h3>Sentido de flujo</h3>
@@ -79,7 +83,7 @@
             </ul>
         </section>
         <section id="Simbolo">
-            <h2>Simbolos de los Diagramas de flujo</h2>
+            <h2>Simbolos de los Diagramas de Flujo</h2>
             <div>
                 <article>
                     <h3>Terminación</h3>
@@ -146,7 +150,7 @@
             </div>
         </section>
         <aside id="Ejemplos">
-            <h2>Ejemplos de Diagramas de flujo</h2>
+            <h2>Ejemplos de Diagramas de Flujo</h2>
             <ul>
                 <li id="Ejemplo1"> <img src="Img/Ejemplo 1.png"></li>
                 <li id="Ejemplo2"> <img src="Img/Ejemplo 2.png"></li>
@@ -154,11 +158,18 @@
             </ul>
         </aside>
     </main>
-    <footer>
-        <p id="Pf"><a href="#Inicio"><img src="Img/Logo.png">Diagramas de Flujo</a></p>
-        <div>
-            <p>Contactanos con:</p>
-            <p><a id="Contacto" href="mailto:DiagramasDeFlujo@gmail.com">DiagramasDeFlujo@gmail.com</a></p>
+    <footer id="Contacto">
+        <div class="Clogo">
+            <img class="Logoimg" src="Img/Logo.png">
+            <p class="Logo"><a href="#Inicio">Diagramas de Flujo</a></p>
+        </div>
+        
+        
+        <div class="social-container">
+            <a href="mailto:DiagramasDeFlujo@gmail.com" class="icon-circle"><figure class="fa-solid fa-envelope"></figure></a>
+            <a href="#" class="icon-circle"><figure class="fa-brands fa-whatsapp"></figure></a>
+            <a href="#" class="icon-circle"><figure class="fa-brands fa-instagram"></figure></a>
+            <a href="#" class="icon-circle"><figure class="fa-brands fa-x-twitter"></figure></a>
         </div>
     </footer>
 </body>

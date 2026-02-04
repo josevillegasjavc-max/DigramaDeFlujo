@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
   
   :root {
     --Negro:     rgb(22, 22, 20);
@@ -18,125 +19,166 @@
 }
 
 html {
-    scroll-padding-top: 68px;
+    scroll-padding-top: 6.8rem;
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 body {
-    background: -webkit-linear-gradient( var(--Azul2), var(--AzulGris));
-    font-family: Arial, Helvetica, sans-serif;
     color: var(--Negro);
     margin: 0;
+    background-image: url('Img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-main{
-    margin-top: 68px;
+header { 
+    box-shadow: 0 1px 15px var(--Gris);
+    justify-content: space-between;
+    background: var(--Blanco2);
+    user-select: none;
+    position: fixed; 
+    padding: 0.5rem; 
+    display: flex;
+    height: 5.7rem;
+    width: 100%;
+    top: 0;   
+    z-index: 2;
+}
+
+.Clogo { 
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 6rem;
+}
+
+.Logoimg { 
+    height: 5.4rem;
+    width: 5rem;
+    padding: 0.5rem;
+    margin: 0;  
+    transition: all 0.3s ease-in-out;
+}
+
+.Logo { 
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+
+    position: relative;
+    font-size: 3.4rem;
+    padding: 0.2rem;
+    margin-bottom: 1.2rem;
+    margin-left: -0.5rem;
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    transition: all 0.3s ease-in-out;
+}
+
+.Logo:hover {
+    transform: translateY(-0.3rem);
+    text-shadow: 2px 4px 8px var(--Azul);
+}
+
+.Clogo:has(.Logo:hover) .Logoimg {
+    transform: rotate(2deg);
+    filter: drop-shadow( 0px 1px 2px var(--Azul));
+}
+
+
+h2,h3,h4,h5,h6,nav,footer{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: bold;
+}
+
+p {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 450;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul { 
     list-style: none;
 }
 
-header { 
-    box-shadow: 0 5px 15px var(--Gris);
-    justify-content: space-between;
-    background: var(--Blanco2);
-    user-select: none;
-    position: fixed; 
-    padding: 0.6em; 
-    display: flex;
-    height: 3em;
-    width: 100%;
-    top: 0;   
-    z-index: 2;
-}
- 
-header img { 
-    padding-left:10px ;
-    height: 38pt;
-    width: 38pt;
-    margin: 0;  
-    transition: all 0.3s ease-in-out;
-}
-
-header:has(h1:hover) img {
-    filter: drop-shadow(0px 0px 4px var(--Azul));
-}
-
-nav ul { 
+.nav { 
     display: inline-flex;
-    margin-right: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 6rem;
+
+    margin-right: 2.7rem;
     color: var(--Azul);
     font-weight: bold;
-    font-size: 18px; 
-    gap: 20px;
+    font-size: 1.9rem; 
+    gap: 2rem;
 }
 
-nav ul li {
+.nav li {
+    padding: 0.2rem;
+    margin-bottom: -0.45rem;
+
     position: relative;
-    background: -webkit-linear-gradient(var(--Azul), var(--Azul2));
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
     -webkit-text-fill-color: transparent;
     background-clip: text; 
     transition: all 0.3s ease-in-out;
 }
 
-nav ul li:hover {
-    text-shadow: 1px 1px 4px var(--Azul); 
-    background: -webkit-linear-gradient(var(--Gris), var(--Azul2));
-    -webkit-text-fill-color: transparent;
-    background-clip: text; 
+.nav li:hover {
+    transform: translateY(-0.3rem);
+    text-shadow: 2px 2px 8px var(--Azul);
 }  
 
-nav ul li::after {
+.nav li::after {
     content: "";
     position: absolute;
-    background: -webkit-linear-gradient(var(--Azul), var(--Blanco));
-    border-radius: 8px;
-    bottom: -5px;
-    height: 15%;
+    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
+    border-radius: 2rem;
+    bottom: 0;
+    height: 5%;
     width: 0%;
     left: 0;
     transition: all 0.3s ease-in-out;
 }
 
-nav ul li:hover::after {
+.nav li:hover::after {
     width: 100%;
+}  
+
+main{
+    margin-top: 6.8rem;
 }
 
-h1 { 
-    display: inline-flex;
-    margin-left: -510px ;
-    margin-top: 13px;
-    font-size: 20pt; 
-    height: 35px;  
+h2 {
+    cursor: pointer;
+    font-size: 4.6rem;
+    margin: 0;
     background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
     -webkit-text-fill-color: transparent;
     background-clip: text; 
     transition: all 0.3s ease-in-out;
 }
 
-h1:hover{
-    text-shadow: 0 0 15px var(--Azul);
-}   
-
-a {
-    text-decoration: none;
-}
-
-h2 {
-    cursor: pointer;
-    font-size: 30pt;
-    margin: 0;
-}
-
-section {
-    border: 1px solid var(--Negro);
-    border-bottom: 4px solid var(--Negro);
+h2:hover {
+    transform: translateY(-0.3rem);
+    text-shadow: 2px 4px 15px var(--AzulGris);
 }
 
 #Inicio {
-    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
-    padding: 45px 100px;
+    padding: 4.5rem 10rem;
 }
 
 #Inicio div {
@@ -144,169 +186,112 @@ section {
     padding: 6px;
 }
 
+
+
 #Inicio h2 {
     display: inline-flex;
     position: relative;
     margin: 0;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    background: -webkit-linear-gradient(var(--Naranja), var(--Naranja2));
-    -webkit-text-fill-color: transparent;
-    background-clip: text; 
-    -webkit-text-stroke-width: 2px ;
-    -webkit-text-stroke-color: var(--Gris);
-}
-
-#Inicio h2:hover {
-    text-shadow: 1px 1px 20px var(--Naranja); 
-    background: -webkit-linear-gradient(#ff6600, #ffee00);
-    -webkit-text-fill-color: transparent;
-    background-clip: text; 
-}  
-
-#Inicio h2::after {
-    content: "";
-    position: absolute;
-    background: -webkit-linear-gradient(#af602b, #e2d51a);
-    border: 0px solid var(--Gris);
-    border-radius: 8px;
-    bottom: -10px;
-    height: 8%;
-    width: 0%;
-    left: 0;
-    transition: all 0.3s 0.2s ease-in-out;
-}
-
-#Inicio h2:hover::after {
-    border: 1px solid var(--Gris);
-    width: 100%;
+    margin-top: 1.5rem;
+    margin-left: -2rem;
+    margin-bottom: 1.5rem;
 }
 
 #Inicio p {
-    text-align: center;
-    font-size: 18pt;
-    padding: 10px;
-    width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    text-align: justify;
+    hyphens: auto; 
+    font-size: 2.41rem;
+    padding: 1.5rem;
+    width: 54rem;
     height: 40%;
-    margin: 20px 50px -0px 20px;
+    margin: 2.0rem 5.0rem -0.5rem 2.0rem;
     text-shadow: 4px 2px 6px var(--Gris);
 
-    background: rgba(255, 255, 255, 0.06); 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+    text-shadow: 4px 2px 6px var(--AzulGris);
+    backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(10rem);
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.25);
     transition: all 0.3s 0.2s ease-in-out;
 }
 
 #Inicio p:hover {
-    transform: rotate(-2deg);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.521);
 }
 
 #Inicio img {
     margin: 0;
-    width: 620px;
-    height: 23em;
-    filter: drop-shadow(0px 0px 14px #000);
-    transition: all 0.3s 0.1s ease-in-out;
+    margin-left: 1rem;
+    width: 61rem;
+    height: 36rem;
+    filter: drop-shadow(0px 0px 10px #292929);
+    transition: all 0.3s 0.4s ease-in-out;
 }
 
 #Inicio img:hover {
     transform: scale(1.05);
-    filter: drop-shadow(10px 10px 20px #000);
+    filter: drop-shadow(10px 10px 15px #111111);
 }
 
+
+
 #Reglas {
-    background: -webkit-linear-gradient(var(--Naranja), var(--Naranja2));
-    padding: 40px 0px;
+    padding: 4rem 0rem;
 }
 
 #Reglas h2 {
     position: relative;
     text-align: center;
     margin: 0px auto;
-    margin-top: -10px;
-    margin-bottom: 40px;
-    padding: 5px;
-    width: 49%;
-
-    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: var(--Negro);
-    transition:  all 0.2s 0.1s ease-in-out;
-}
-
-#Reglas h2:hover {
-    text-shadow: 0 0 20px var(--Azul2);
-}
-
-#Reglas h2::after {
-    content: "";
-    position: absolute;
-    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
-    border: 0px solid var(--Gris);
-    border-radius: 8px;
-    bottom: -5px;
-    height: 8%;
-    width: 0%;
-    left: 0;
-    transition: all 0.3s 0.2s ease-in-out;
-}
-
-#Reglas h2:hover::after {
-    border: 1px solid var(--Gris);
-    width: 100%;
-}
+    margin-top: -1rem;
+    margin-bottom: 4rem;
+    padding: 0.5rem;
+    width: 52%;
+}    
 
 #Reglas ul {
     justify-content: center; 
-    margin-top: 30px;
+    margin-top: 3rem;
     flex-wrap: wrap;
-    gap: 20px 15px;
+    gap: 2.7rem 1.5rem;
     display: flex;
     width: 100%;
     padding: 0;
 }
 
 #Reglas li {
-    border: 1px solid var(--Blanco);
     cursor: pointer;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 1rem;
+    padding: 0.5rem;
 
     flex: 0 1 calc(21% - 50px); 
-    min-width: 200px;            
-    height: 160px;
+    min-width: 20rem;            
+    height: 16rem;
 
     background: rgba(255, 255, 255, 0.06); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.384);
+    border: 1px solid rgba(16, 109, 231, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(32, 36, 49, 0.384);
     transition: all 0.2s ease-in-out;
 }
 
 #Reglas li:hover {
-    transform: rotate(-3deg);
+    transform: rotate(-3deg) translateY(-1.2rem);
 }
 
 #Reglas h3 {
     justify-content: center;
-    width: 185px;
+    width: 18.5rem;
     display: flex;
     position: relative;
-    margin: 10px auto;
+    margin: 1rem auto;
     font-size: 17pt;
 
-    background: -webkit-linear-gradient(var(--Azul), var(--AzulClaro));
+    background: -webkit-linear-gradient(var(--Azul), var(--AzulGris));
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: var(--Negro);
     transition: all 0.3s 0.2s ease-in-out;
 }
 
@@ -315,62 +300,36 @@ section {
 }
 
 #Reglas p {
-    text-align:center;
-    padding: 0px 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;    
+    padding: 0 1rem;
     font-size: 13pt;
     margin: 0;
-    text-shadow: 4px 2px 6px var(--Naranja);
+    text-shadow: 4px 2px 6px var(--AzulGris);
 }
 
+
+
 #Simbolo {
-    background: -webkit-linear-gradient(var(--AzulClaro), var(--Naranja2));
-    padding: 45px 20px;
+    padding: 4.5rem 2rem;
 }
 
 #Simbolo h2 {
     position: relative;
     text-align: center;
     margin: 0px auto;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 680px;
-
-    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: var(--Negro);
-    transition:  all 0.2s 0.1s ease-in-out;
-}
-
-#Simbolo h2:hover {
-    text-shadow: 0 0 20px var(--Naranja2);
-}
-
-#Simbolo h2::after {
-    content: "";
-    position: absolute;
-    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
-    border: 0px solid var(--Gris);
-    border-radius: 8px;
-    bottom: -3px;
-    height: 8%;
-    width: 0%;
-    left: 0;
-    transition: all 0.3s 0.2s ease-in-out;
-}
-
-#Simbolo h2:hover::after {
-    border: 1px solid var(--Gris);
-    width: 100%;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: 78rem;
 }
 
 #Simbolo div {
     justify-content: center; 
-    margin-top: 30px;
+    margin-top: 3rem;
     flex-wrap: wrap;
-    gap: 30px 25px;
+    gap: 3rem 2.5rem;
     display: flex;
     width: 100%;
     padding: 0;
@@ -378,109 +337,77 @@ section {
 
 #Simbolo article {
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
     margin: 0px;
-    border-radius: 5px;
+    border-radius: 0.5rem;
 
     flex: 0 1 calc(23% - 5px); 
 
     background: rgba(255, 255, 255, 0.06); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.384);
+    border: 1px solid rgba(16, 109, 231, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(32, 36, 49, 0.384);
     transition: all 0.2s ease-in-out;
 }
 
 #Simbolo article:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.589);
+    box-shadow: 0 8px 32px 0 rgba(11, 11, 43, 0.589);
 }
 
 #Simbolo img {
-    width: 130px;
-    height: 90px;
+    width: 13rem;
+    height: 9rem;
     filter: hue-rotate(310deg);
     filter: drop-shadow(0 0 10px rgba(207, 207, 207, 0.589) );
 }
 
 #Simbolo .conector img {
-    width: 160px;
-    height: 90px;
+    width: 16rem;
+    height: 9rem;
 }
 
 #Simbolo h3 {
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     font-size: 17pt;
 
-    background: -webkit-linear-gradient(var(--Naranja2), var(--AzulClaro));
+    background: -webkit-linear-gradient(var(--AzulGris), var(--AzulClaro));
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: var(--Negro);
     transition:  all 0.2s 0.1s ease-in-out;
 }
 
 #Simbolo article:hover h3 {
-    text-shadow: 0 0 20px var(--Naranja2);
+    text-shadow: 1px 2px 6px var(--Azul);
 }
 
 #Simbolo p {
     text-align:center;
-    padding: 0px 10px;
+    padding: 0rem 1rem;
     font-size: 13pt;
     margin: 0;
-    margin-top: 20px;
-    text-shadow: 4px 2px 6px var(--AzulClaro);
+    margin-top: 2rem;
+    text-shadow: 4px 2px 6px var(--AzulGris);
 }
 
 #Ejemplos  {
-    background: -webkit-linear-gradient( var(--Azul2), var(--AzulGris));
-    padding: 45px 20px;
+    padding: 4.5rem 2rem;
 }
 
 #Ejemplos h2 {
     position: relative;
     text-align: center;
     margin: 0px auto;
-    margin-top: -20px;
-    margin-bottom: 20px;
-    padding: 5px;
-    width: 680px;
-
-    background: -webkit-linear-gradient(var(--AzulGris) , var(--Azul2));
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-text-stroke-width: 1px ;
-    -webkit-text-stroke-color: var(--Negro);
-    transition:  all 0.2s 0.1s ease-in-out;
-}
-
-#Ejemplos h2:hover {
-    text-shadow: 0 0 20px var(--Azul2);
-}
-
-#Ejemplos h2::after {
-    content: "";
-    position: absolute;
-    background: -webkit-linear-gradient(var(--Azul2), var(--AzulGris));
-    border: 0px solid var(--Gris);
-    border-radius: 8px;
-    bottom: -3px;
-    height: 8%;
-    width: 0%;
-    left: 0;
-    transition: all 0.3s 0.2s ease-in-out;
-}
-
-#Ejemplos h2:hover::after {
-    border: 1px solid var(--Gris);
-    width: 100%;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    width: 70rem;
 }
 
 #Ejemplos ul {
-    max-width: 1500px;
+    max-width: 150rem;
     margin: 0 auto;
     padding: 0;
 }
@@ -488,36 +415,34 @@ section {
 #Ejemplos li {
     display: inline-flex;
     margin: 0px 16px;
-    width: 396px;
-    
-    background: linear-gradient(145deg, #2e2b2ba6, #25222293);
-    border: 1px solid rgba(236, 226, 226, 0.589);
+    width: 39.6rem;
     border-radius: 20px;
-    
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.384), -5px -5px 20px rgba(62, 197, 250, 0.1); 
 
+    background: linear-gradient(145deg, #f3eeeea6, #a8a8a893);
+    border: 1px solid rgba(16, 109, 231, 0.37);
+    box-shadow: 0 6px 20px 0 rgba(20, 24, 82, 0.384), -5px -5px 20px rgba(62, 197, 250, 0.1);
     transition: all 0.2s ease-in-out;
 }
 
 #Ejemplos #Ejemplo1 img {
-    margin: 10px auto;
-    height: 385px;
-    width: 270px;
+    margin: 1rem auto;
+    height: 38.5rem;
+    width: 27rem;
     filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
 }
 
 #Ejemplos #Ejemplo2 img {
-    margin: 10px auto;
-    height: 385px;
-    width: 380px;
+    margin: 1rem auto;
+    height: 38.5rem;
+    width: 38rem;
     filter: drop-shadow(0 0 10px rgba(49, 51, 51, 0.589) );
 }
 
 #Ejemplos #Ejemplo3 img {
-    margin: 10px auto;
+    margin: 1rem auto;
     padding: 7px;
-    height: 370px;
-    width: 376px;
+    height: 37.6rem;
+    width: 37.6rem;
     filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
 }
 
@@ -529,147 +454,72 @@ footer {
     box-shadow: 0 5px 15px var(--Gris);
     justify-content: space-between;
     background: var(--Blanco2);
-    border: 2px solid var(--Negro);
-    border-top: 2px solid var(--Negro);
+    border-top: 1px solid rgba(16, 109, 231, 0.37);
     border-radius: 40px 40px 0px 0px;
     display: flex;
-    padding: 10px;
+    padding: 0.2rem;
     box-sizing: border-box;
     width: 100%;
     margin: 0;  
 }
 
-footer img { 
-    padding-left:10px ;
-    height: 38pt;
-    width: 38pt;
-    margin: 0;  
+footer .Clogo {
+    padding: 0.4rem;
+}
+
+.social-container {
+    gap: 0px 1.5rem;
+    display: flex;
     padding: 0;
-    transition: all 0.3s ease-in-out;
+    margin: 0;
+    margin-right: 4rem;
+    margin-top: 1rem;
 }
 
-footer #Pf { 
-    font-weight: bold;
-    font-size: 20pt; 
-    height: 64px;
-    margin: 0;
-    margin-top: 9px;
+.icon-circle {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 2px solid var(--Azul);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    background: transparent;
+}
+
+.icon-circle figure {
+    color: var(--Azul);
+    font-size: 2.4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.icon-circle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0; 
     background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
     -webkit-text-fill-color: transparent;
-    background-clip: text; 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s 0.1s ease-in-out;
+    z-index: 1;
 }
 
-footer #Pf:hover{
-    text-shadow: 0 0 15px var(--Azul);
-} 
-
-footer:has(#Pf:hover) img {
-    filter: drop-shadow(0px 0px 4px var(--Azul));
+.icon-circle:hover::before {
+    height: 100%;
 }
 
-footer div{
-    height: 70px;
-    margin: 0;
-    background: -webkit-linear-gradient(var(--AzulClaro), var(--Azul));
-    -webkit-text-fill-color: transparent;
-    background-clip: text; 
-    text-shadow: 0 0 15px var(--Azul);
-} 
+.icon-circle:hover figure {
+    color: var(--Blanco2); 
+    transition: all 0.4s ease;
+}
 
-/* --- ADAPTACIÓN PARA MÓVILES (Pantallas menores a 768px) --- */
-@media (max-width: 768px) {
-    
-    /* 1. Header y Navegación */
-    header {
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        position: relative; /* Evita que tape el contenido al ser más alto */
-    }
-
-    h1 {
-        margin-left: 0; /* Quitamos el margen negativo que lo sacaba de pantalla */
-        margin-top: 10px;
-        font-size: 16pt;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        margin-right: 0;
-        padding: 10px 0;
-    }
-
-    main {
-        margin-top: 0;
-    }
-
-    /* 2. Sección Inicio */
-    #Inicio {
-        padding: 20px;
-    }
-
-    #Inicio h2 {
-        font-size: 22pt;
-        display: block;
-        text-align: center;
-    }
-
-    #Inicio div {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #Inicio p {
-        width: 100%; /* El texto ahora ocupa todo el ancho disponible */
-        margin: 20px 0;
-        font-size: 14pt;
-    }
-
-    #Inicio img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* 3. Sección Reglas y Símbolos */
-    #Reglas h2, #Simbolo h2, #Ejemplos h2 {
-        width: 90%; /* Ya no son fijos a 680px */
-        font-size: 20pt;
-    }
-
-    #Reglas li, #Simbolo article {
-        flex: 0 1 100%; /* Una sola columna en móvil */
-        max-width: 100%;
-    }
-
-    /* 4. Sección Ejemplos */
-    #Ejemplos ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    #Ejemplos li {
-        width: 90%; /* Las tarjetas se adaptan al ancho del móvil */
-        margin: 0;
-        justify-content: center;
-    }
-
-    #Ejemplos #Ejemplo1 img, 
-    #Ejemplos #Ejemplo2 img, 
-    #Ejemplos #Ejemplo3 img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* 5. Footer */
-    footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        text-align: center;
-    }
+.icon-circle:hover {
+    box-shadow: 0 0 15px var(--Azul);
 }
