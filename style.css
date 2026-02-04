@@ -2,16 +2,12 @@
   
   :root {
     --Negro:     rgb(22, 22, 20);
-    --Blanco:    #f5efed;
     --Blanco2:   #d3d3d3;
     --Gris:      #292626;
     --Azul:      #0c3fce;
     --Azul2:     #3ec5fa;
-    --AzulOscuro:rgb(21, 48, 83);
     --AzulClaro: #14a5be;
     --AzulGris:  #435bc7;
-    --Naranja:   #d15f13;
-    --Naranja2:  #c7bc21;
 }
 
 * {
@@ -186,8 +182,6 @@ h2:hover {
     padding: 6px;
 }
 
-
-
 #Inicio h2 {
     display: inline-flex;
     position: relative;
@@ -234,8 +228,6 @@ h2:hover {
     filter: drop-shadow(10px 10px 15px #111111);
 }
 
-
-
 #Reglas {
     padding: 4rem 0rem;
 }
@@ -247,7 +239,6 @@ h2:hover {
     margin-top: -1rem;
     margin-bottom: 4rem;
     padding: 0.5rem;
-    width: 52%;
 }    
 
 #Reglas ul {
@@ -263,7 +254,7 @@ h2:hover {
 #Reglas li {
     cursor: pointer;
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 0.65rem;
 
     flex: 0 1 calc(21% - 50px); 
     min-width: 20rem;            
@@ -309,8 +300,6 @@ h2:hover {
     text-shadow: 4px 2px 6px var(--AzulGris);
 }
 
-
-
 #Simbolo {
     padding: 4.5rem 2rem;
 }
@@ -322,7 +311,6 @@ h2:hover {
     margin-top: -2rem;
     margin-bottom: 2rem;
     padding: 0.5rem;
-    width: 78rem;
 }
 
 #Simbolo div {
@@ -403,7 +391,6 @@ h2:hover {
     margin-top: -2rem;
     margin-bottom: 2rem;
     padding: 0.5rem;
-    width: 70rem;
 }
 
 #Ejemplos ul {
@@ -426,23 +413,23 @@ h2:hover {
 
 #Ejemplos #Ejemplo1 img {
     margin: 1rem auto;
-    height: 38.5rem;
-    width: 27rem;
+    height: 38rem;
+    width: 26.5rem;
     filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
 }
 
 #Ejemplos #Ejemplo2 img {
     margin: 1rem auto;
-    height: 38.5rem;
-    width: 38rem;
+    height: 38rem;
+    width: 37.5rem;
     filter: drop-shadow(0 0 10px rgba(49, 51, 51, 0.589) );
 }
 
 #Ejemplos #Ejemplo3 img {
     margin: 1rem auto;
     padding: 7px;
-    height: 37.6rem;
-    width: 37.6rem;
+    height: 37rem;
+    width: 37rem;
     filter: drop-shadow(0 0 10px rgba(51, 49, 49, 0.589) );
 }
 
