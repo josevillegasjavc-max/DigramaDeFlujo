@@ -198,8 +198,8 @@ h2:hover {
     hyphens: auto; 
     font-size: 2.41rem;
     padding: 1.5rem;
+    padding-top: 2.8rem;
     width: 54rem;
-    height: 40%;
     margin: 2.0rem 5.0rem -0.5rem 2.0rem;
     text-shadow: 4px 2px 6px var(--Gris);
 
@@ -258,7 +258,7 @@ h2:hover {
 
     flex: 0 1 calc(21% - 50px); 
     min-width: 20rem;            
-    height: 16rem;
+    min-height: 16rem;
 
     background: rgba(255, 255, 255, 0.06); 
     backdrop-filter: blur(10px);
